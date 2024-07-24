@@ -594,13 +594,15 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+/* Existing CSS code */
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
-   text-align: center;
-   margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
-.about .content{
+
+.about .content {
   margin: auto;
   width: 50%;
 }
@@ -625,6 +627,40 @@ section,
   margin-right: 5px;
   color: var(--accent-color);
   line-height: 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .about .content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 992px) {
+  .about .content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .content {
+    width: 95%;
+  }
+
+  .about .content ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about .content ul strong {
+    margin-right: 0;
+  }
 }
 
 /*--------------------------------------------------------------
