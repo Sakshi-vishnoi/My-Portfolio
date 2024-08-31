@@ -1,15 +1,4 @@
-/**
-* Template Name: MyResume
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -18,7 +7,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
@@ -698,6 +687,73 @@ section,
   height: 10px;
   transition: 0.9s;
   background-color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+.projects-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.projects-section .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects-section .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.projects-section .project-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: calc(33.333% - 40px); /* Adjust as needed for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.projects-section .project-item h3 {
+  margin-top: 0;
+  line-height: 18px;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.projects-section .project-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.projects-section .project-item a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .projects-section .project-item {
+    width: calc(50% - 40px); /* Two items per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section .project-item {
+    width: calc(100% - 40px); /* Full width on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-section .project-item {
+    width: calc(100% - 20px); /* Ensure proper spacing on very small screens */
+  }
 }
 
 /*--------------------------------------------------------------
